@@ -1,0 +1,139 @@
+<ul class="nav justify-content-end" id="landing-nav">
+  <li class="nav-item">
+    <span class="nav-link" data-target="#courses">
+      <%= data.courses.title %></span>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"  data-target="#step-to-apply">
+      <%= data.apply.title %></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-target="#question-answer">
+      <%= data.faq.title %></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Chat เลย</a>
+  </li>
+</ul>
+
+<div id="hero-image">
+  <div class="image"></div> <!-- .image -->
+</div>
+
+<div class="container" id="courses">
+  <h2><%= data.courses.title %></h2>
+  <div class="row course-2-ele pb-3">
+    <div class="col-md-6 col-sm-12">
+      <div class="course-1">
+        <div class="image"></div> <!-- .image -->
+        <h3 class="title"><%= data.courses.course1.title %></h3>
+        <p class="subtitle"><%= data.courses.course1.subtitle %></p>
+      </div> <!-- .course-1 -->
+    </div> <!-- .col-md-6 -->
+    <div class="col-md-6 col-sm-12">
+      <div class="course-2">
+        <div class="image"></div> <!-- .image -->
+        <h3 class="title"><%= data.courses.course2.title %></h3>
+        <p class="subtitle"><%= data.courses.course2.subtitle %></p>
+      </div>
+    </div> <!-- .col-md-6 -->
+  </div> <!-- .row -->
+
+  <div class="row course-4-ele">
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="course-3">
+        <div class="box mb-4">
+          <div class="image"></div> <!-- .image -->
+          <a href="#" class="btn btn-rect btn-primary btn-block">2,500</a>
+        </div>
+        <h4 class="title"><%= data.courses.course3.title %></h4>
+        <p class="subtitle"><%= data.courses.course3.subtitle %></p>
+      </div> <!-- .course-3 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="course-4">
+        <div class="box mb-4">
+          <div class="image"></div> <!-- .image -->
+          <a href="#" class="btn btn-rect btn-primary btn-block">2,500</a>
+        </div>
+        <h4 class="title"><%= data.courses.course4.title %></h4>
+        <p class="subtitle"><%= data.courses.course4.subtitle %></p>
+      </div> <!-- .course-4 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="course-5">
+        <div class="box mb-4">
+          <div class="image"></div> <!-- .image -->
+          <a href="#" class="btn btn-rect btn-primary btn-block">2,500</a>
+        </div>
+        <h4 class="title"><%= data.courses.course5.title %></h4>
+        <p class="subtitle"><%= data.courses.course5.subtitle %></p>
+      </div> <!-- .course-5 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+    <div class="col-lg-3 col-md-6 col-xs-12">
+      <div class="course-6">
+        <div class="box mb-4">
+          <div class="image"></div> <!-- .image -->
+          <a href="#" class="btn btn-rect btn-primary btn-block">2,500</a>
+        </div>
+        <h4 class="title"><%= data.courses.course6.title %></h4>
+        <p class="subtitle"><%= data.courses.course6.subtitle %></p>
+      </div> <!-- .course-6 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+  </div> <!-- .row course-4-ele -->
+</div> <!-- .container -->
+
+<div id="step-to-apply" class="py-1 my-4">
+  <div class="container">
+    <h2 class="text-center"><%= data.apply.title %></h2>
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <div class="steps fa-4x">
+          <i class="fa fa-comments step-icon"></i>
+        </div> <!-- .steps -->
+        <h5 class="title"><%= data.apply.step1.title %></h5> <!-- .title -->
+        <p class="subtitle"><%= data.apply.step1.subtitle %></p> <!-- .subtitle -->
+      </div> <!-- .col-md-4 col-xs-12 -->
+      <div class="col-md-4 col-xs-12">
+        <div class="steps fa-4x">
+          <i class="far fa-credit-card step-icon"></i>
+        </div> <!-- .steps -->
+        <h5 class="title"><%= data.apply.step2.title %></h5> <!-- .title -->
+        <p class="subtitle"><%= data.apply.step2.subtitle %></p> <!-- .subtitle -->
+      </div> <!-- .col-md-4 col-xs-12 -->
+      <div class="col-md-4 col-xs-12">
+        <div class="steps fa-4x">
+          <span class="fa-layers fa-fw">
+            <i class="fas fa-file-alt step-icon"></i>
+            <i class="far fa-paper-plane" data-fa-transform="shrink-12 up-3 right-3"></i>
+          </span>
+        </div> <!-- .steps -->
+        <h5 class="title"><%= data.apply.step3.title %></h5> <!-- .title -->
+        <p class="subtitle"><%= data.apply.step3.subtitle %></p> <!-- .subtitle -->
+      </div> <!-- .col-md-4 col-xs-12 -->
+    </div> <!-- .row -->
+  </div> <!-- .container -->
+</div>
+<%= partial "ads_sales_page" %>
+<%= partial "why_we_need_to_study" %>
+
+<div class="container" id="question-answer">
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <%= image_tag "helloquence-61189-unsplash.jpg", width: '100%' %>
+    </div> <!-- .col-md-6 col-xs-12 -->
+
+    <div class="col-md-6 col-xs-12">
+      <h2><%= data.faq.title %></h2>
+      <% data.faq.answers.each do |answer| %>
+        <div class="answer pb-2 pl-3">
+          <i class="fa fa-angle-right faa-horizontal animated-hover"></i>
+          <%= answer %>
+        </div> <!-- .answer -->
+      <% end %>
+    </div> <!-- .col-md-6 col-xs-12 -->
+  </div> <!-- .row -->
+</div> <!-- .container -->
+<%= partial "testimonial" %>
+<%= partial "footer" %>

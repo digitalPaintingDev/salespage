@@ -1,0 +1,50 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <h6>เกี่ยวกับเรา</h6>
+      </div> <!-- .col-md-4 col-sm-6 col-xs-12 -->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <h6>ติดตามข่าวสาร</h6>
+        <div class="fb-page" data-href="https://www.facebook.com/minianimalstudio/"
+          data-tabs="timeline" data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true"
+          data-height="350">
+          <blockquote cite="https://www.facebook.com/minianimalstudio/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/minianimalstudio/">สอนDigital Painting/Concept Art/Drawing/Illustration</a>
+          </blockquote>
+        </div>
+      </div> <!-- .col-md-4 col-sm-6 col-xs-12 -->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <h6>ฝากข้อความ</h6>
+        <% form_tag '/send_email', :class => 'mail-form', :method => 'post' do %>
+          <div class="form-group">
+            <%= label_tag "ชื่อ", :class => 'name' %><br>
+            <%= text_field_tag :name, required: true,
+                  class: 'form-control input-sm' %>
+          </div> <!-- .form-group -->
+
+          <div class="form-group">
+            <%= label_tag "อีเมล์", :class => 'email' %><br>
+            <%= email_field_tag :email, class: 'form-control input-sm' %>
+          </div> <!-- .form-group -->
+
+          <div class="form-group">
+            <%= label_tag "หัวข้อ", :class => 'title' %><br>
+            <%= text_field_tag :title, class: 'form-control input-sm' %>
+          </div> <!-- .form-group -->
+
+          <div class="form-group">
+            <%= label_tag "ข้อความ", :class => 'body' %><br>
+            <%= text_area_tag :body, class: 'form-control input-sm' %>
+          </div> <!-- .form-group -->
+
+          <%= submit_tag "ส่งข้อความ", class: 'btn btn-primary' %>
+
+        <% end %>
+      </div> <!-- .col-md-4 col-sm-6 col-xs-12 -->
+    </div> <!-- .row -->
+  </div> <!-- .container -->
+</footer>
