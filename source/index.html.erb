@@ -17,7 +17,40 @@
 </ul>
 
 <div id="hero-image">
-  <div class="image"></div> <!-- .image -->
+  <div class="image">
+    <div class="row selling-point">
+      <div class="col-sm-3">
+        <% link_to "#", 'data-target': "#courses" do %>
+          <h5>คอร์สเรียน</h5>
+          <small>
+            คอร์สเรียนหลากหลาย <br>
+            สอนตั้งแต่พื้นฐานจนถึงขึ้นมืออาขีพ
+          </small>
+        <% end %>
+      </div> <!-- .col-sm-3 -->
+      <div class="col-sm-3">
+        <% link_to "#", 'data-target': '#step-to-apply' do %>
+          <h5>ขั้นตอนสมัคร</h5>
+          <small>
+            สมัครได้อย่างง่ายและรวดเร็ว <br>
+            เริ่มเรียนได้ทันที
+          </small>
+        <% end %>
+      </div> <!-- .col-sm-3 -->
+      <div class="col-sm-3">
+        <% link_to "#", 'data-target': "#why-we-need-to-study" do %>
+          <h5>ทำไมถึงต้องเรียน</h5>
+          <small>
+            การเรียนไม่มีที่สิ้นสุด เริ่มก่อน รู้ก่อน<br>
+            พร้อมตอบปัญหาที่พบบ่อย
+          </small>
+        <% end %>
+      </div> <!-- .col-sm-3 -->
+      <div class="col-sm-3">
+        <%= link_to "สอบถามข้อมูล", "#", class: "btn btn-primary" %>
+      </div> <!-- .col-sm-3 -->
+    </div> <!-- .row -->
+  </div> <!-- .image -->
 </div>
 
 <div class="container" id="courses">
