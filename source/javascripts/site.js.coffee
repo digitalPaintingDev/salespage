@@ -1,5 +1,6 @@
 #= require jquery
 #= require jquery.fullpage.min
+#= require plugins/ajax_form
 
 $ ->
 
