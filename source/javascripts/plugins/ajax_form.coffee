@@ -26,6 +26,7 @@ $ ->
       $modal = $("#modalResult")
       $modal.find('.loading').show()
       $modal.modal('show')
+      clearForm($form)
 
       $.ajax
         type: 'POST'
@@ -47,6 +48,7 @@ $ ->
             when 'success'
               $modal.find('.loading').hide()
               $modal.find('.submit-result span.submit-success').show()
+              @clearForm($form)
             when 'validationFailed'
               $modal.find('.loading').hide()
               $modal.find('.submit-result span.validation-failed').show()
@@ -57,3 +59,14 @@ $ ->
         error: (data) ->
           $modal.find('.loading').hide()
           $modal.find('.submit-result span.submit-error').show()
+
+  clearForm = ($form) ->
+    $form.find(':input').each  ->
+      type = this.type
+      tag = this.tagName.toLowerCase()
+
+      return if type == 'hidden'
+      if (type == 'checkbox' || type == 'radio')
+        $(@).prop('checked', false)
+      else
+        $(@).val('')
