@@ -24,6 +24,8 @@ $ ->
       formData = new FormData($form[0])
       url = $form.attr('action')
       $modal = $("#modalResult")
+      $modal.find('.loading').show()
+      $modal.modal('show')
 
       $.ajax
         type: 'POST'
@@ -43,16 +45,15 @@ $ ->
           response = JSON.parse(data)
           switch response.result
             when 'success'
+              $modal.find('.loading').hide()
               $modal.find('.submit-result span.submit-success').show()
-              $modal.modal('show')
             when 'validationFailed'
+              $modal.find('.loading').hide()
               $modal.find('.submit-result span.validation-failed').show()
-              $modal.modal('show')
             when 'error'
+              $modal.find('.loading').hide()
               $modal.find('.submit-result span.submit-error').show()
-              $modal.modal('show')
 
         error: (data) ->
-          $modal.find('.submit-result span').hide()
+          $modal.find('.loading').hide()
           $modal.find('.submit-result span.submit-error').show()
-          $modal.modal('show')

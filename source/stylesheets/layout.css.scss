@@ -29,6 +29,10 @@ body {
   line-height: 1.5;
 }
 
+.modal {
+  .submit-result span { display: none; }
+}
+
 .nav {
   background-color: $color-background;
   &,
