@@ -5,13 +5,16 @@ $carousel-control-color: black;
   padding: 40px 0;
 }
 
-.carousel-inner {
-  height: 350px;
+.carousel-inner-wrapper {
   padding: 20px 20px 20px 80px;
 }
 
+.carousel-inner {
+  height: 350px;
+}
+
 @media (max-width: 786px) {
-  .carousel-inner {
+  .carousel-inner-wrapper {
     padding: 20px 40px;
   }
 }

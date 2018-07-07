@@ -4,26 +4,28 @@
       <li data-target="#carouselTestimonialIndicators" data-slide-to="<%= i %>" class=<%= "active" if i.zero? %>></li>
     <% end %>
   </ol>
-  <div class="carousel-inner">
-    <% 8.times do |i| %>
-      <div class="<%= "carousel-item #{'active' if i.zero? }"%>">
-        <div class="row">
-          <div class="col-sm-6 col-md-4 text-center">
-            <%= image_tag "testimonial#{i+1}.jpg",
-                  class: "rounded-circle",
-                  alt: "Testimonial#{i+1}", width: 200, height: 200 %>
-          </div>
-          <div class="col-sm-6 col-md-7">
-            <h6 class="sentense text-center mt-4">
-              <%= data.testimonials.send("testimonial#{i+1}").sentense_html %>
-            </h6><br><br>
-            <p class="name text-right">
-              <%= data.testimonials.send("testimonial#{i+1}").name %>
-            </p> <!-- .name -->
+  <div class="carousel-inner-wrapper">
+    <div class="carousel-inner">
+      <% 8.times do |i| %>
+        <div class="<%= "carousel-item #{'active' if i.zero? }"%>">
+          <div class="row">
+            <div class="col-sm-6 col-md-4 text-center">
+              <%= image_tag "testimonial#{i+1}.jpg",
+                    class: "rounded-circle",
+                    alt: "Testimonial#{i+1}", width: 200, height: 200 %>
+            </div>
+            <div class="col-sm-6 col-md-7">
+              <h6 class="sentense text-center mt-4">
+                <%= data.testimonials.send("testimonial#{i+1}").sentense_html %>
+              </h6><br><br>
+              <p class="name text-right">
+                <%= data.testimonials.send("testimonial#{i+1}").name %>
+              </p> <!-- .name -->
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
   <a class="carousel-control-prev" href="#carouselTestimonialIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
