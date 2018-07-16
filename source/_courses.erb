@@ -1,0 +1,74 @@
+<form class="checkout-form" name="checkoutForm" method="POST" action="http://localhost:8888/checkout.php">
+
+  <div class="container" id="courses">
+    <h2><%= data.courses.title %></h2>
+    <div class="row course-2-ele pb-3">
+      <div class="col-md-6 col-sm-12">
+        <div class="course-1">
+          <div class="image"></div> <!-- .image -->
+          <h3 class="title"><%= data.courses.course1.title %></h3>
+          <p class="subtitle"><%= data.courses.course1.subtitle %></p>
+        </div> <!-- .course-1 -->
+      </div> <!-- .col-md-6 -->
+      <div class="col-md-6 col-sm-12">
+        <div class="course-2">
+          <div class="image"></div> <!-- .image -->
+          <h3 class="title"><%= data.courses.course2.title %></h3>
+          <p class="subtitle"><%= data.courses.course2.subtitle %></p>
+        </div>
+      </div> <!-- .col-md-6 -->
+    </div> <!-- .row -->
+
+    <div class="row course-4-ele">
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="course-3">
+          <div class="box mb-4">
+            <div class="image"></div> <!-- .image -->
+            <%= hidden_field_tag "course", value: "1" %>
+            <button type="submit" class="btn btn-rect btn-primary btn-block"
+              id="checkout-course-3">
+              2,500</button>
+          </div>
+          <h4 class="title"><%= data.courses.course3.title %></h4>
+          <p class="subtitle"><%= data.courses.course3.subtitle %></p>
+        </div> <!-- .course-3 -->
+      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="course-4">
+          <div class="box mb-4">
+            <div class="image"></div> <!-- .image -->
+            <button type="submit" class="btn btn-rect btn-primary btn-block"
+              id="checkout-course-4">
+              2,500</button>
+          </div>
+          <h4 class="title"><%= data.courses.course4.title %></h4>
+          <p class="subtitle"><%= data.courses.course4.subtitle %></p>
+        </div> <!-- .course-4 -->
+      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="course-5">
+          <div class="box mb-4">
+            <div class="image"></div> <!-- .image -->
+            <button type="submit" class="btn btn-rect btn-primary btn-block"
+              id="checkout-course-5">
+              2,500</a>
+          </div>
+          <h4 class="title"><%= data.courses.course5.title %></h4>
+          <p class="subtitle"><%= data.courses.course5.subtitle %></p>
+        </div> <!-- .course-5 -->
+      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="course-6">
+          <div class="box mb-4">
+            <div class="image"></div> <!-- .image -->
+            <button type="submit" class="btn btn-rect btn-primary btn-block"
+              id="checkout-course-6">
+              2,500</a>
+          </div>
+          <h4 class="title"><%= data.courses.course6.title %></h4>
+          <p class="subtitle"><%= data.courses.course6.subtitle %></p>
+        </div> <!-- .course-6 -->
+      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+    </div> <!-- .row course-4-ele -->
+  </div> <!-- .container -->
+</form>
