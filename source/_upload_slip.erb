@@ -5,29 +5,33 @@
         <% form_tag 'http://localhost:8888/email_form_with_php.php',
           :class => 'mail-form ajax-form', :method => 'post' do %>
           <div class="form-group">
-            <%= label_tag "ชื่อ", :class => 'name' %><br>
+            <%= label_tag "ชื่อ*", :class => 'name' %><br>
             <%= text_field_tag :name, required: true,
                   class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
 
           <div class="form-group">
-            <%= label_tag "อีเมล์", :class => 'email' %><br>
-            <%= email_field_tag :email, class: 'form-control input-sm' %>
+            <%= label_tag "อีเมล์*", :class => 'email' %><br>
+            <%= email_field_tag :email, required: true,
+                  class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
 
           <div class="form-group">
-            <%= label_tag "เบอร์โทรศัพท์" %><br>
-            <%= text_field_tag :phone, class: 'form-control input-sm' %>
+            <%= label_tag "เบอร์โทรศัพท์*" %><br>
+            <%= text_field_tag :phone, required: true,
+                  class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
 
           <div class="form-group">
-            <%= label_tag "คอร์สเรียน" %><br>
-            <%= text_field_tag :course_name, class: 'form-control input-sm' %>
+            <%= label_tag "คอร์สเรียน*" %><br>
+            <%= text_field_tag :course_name, required: true,
+                  class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
 
           <div class="form-group">
-            <%= label_tag "เลือกไฟล์"  %><br>
-            <%= file_field_tag :slip, class: 'form-control input-sm' %>
+            <%= label_tag "เลือกไฟล์*"  %><br>
+            <%= file_field_tag :slip, required: true,
+                  class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
           <%= hidden_field_tag "reply_to", value: "email" %>
           <%= hidden_field_tag "email_subject", value: "แจ้งชำระเงิน" %>

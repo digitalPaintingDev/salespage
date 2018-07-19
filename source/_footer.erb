@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-4 col-sm-6 col-xs-12">
         <h6>เกี่ยวกับเรา</h6>
+        <%= link_to 'นโยบายความเป็นส่วนตัว', '/privacy_policy' %>
       </div> <!-- .col-md-4 col-sm-6 col-xs-12 -->
       <div class="col-md-4 col-sm-6 col-xs-12">
         <h6>ติดตามข่าวสาร</h6>
@@ -22,24 +23,27 @@
         <% form_tag 'http://localhost:8888/email_form_with_php.php',
           :class => 'mail-form ajax-form', :method => 'post' do %>
           <div class="form-group">
-            <%= label_tag "ชื่อ", :class => 'name' %><br>
+            <%= label_tag "ชื่อ*", :class => 'name' %><br>
             <%= text_field_tag :name, required: true,
                   class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
 
           <div class="form-group">
-            <%= label_tag "อีเมล์", :class => 'email' %><br>
-            <%= email_field_tag :email, class: 'form-control input-sm' %>
+            <%= label_tag "อีเมล์*", :class => 'email' %><br>
+            <%= email_field_tag :email, required: true,
+                  class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
 
           <div class="form-group">
-            <%= label_tag "หัวข้อ", :class => 'title' %><br>
-            <%= text_field_tag :title, class: 'form-control input-sm' %>
+            <%= label_tag "หัวข้อ*", :class => 'title' %><br>
+            <%= text_field_tag :title, required: true,
+                  class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
 
           <div class="form-group">
-            <%= label_tag "ข้อความ", :class => 'body' %><br>
-            <%= text_area_tag :body, class: 'form-control input-sm' %>
+            <%= label_tag "ข้อความ*", :class => 'body' %><br>
+            <%= text_area_tag :body, required: true,
+                  class: 'form-control input-sm' %>
           </div> <!-- .form-group -->
           <%= hidden_field_tag "reply_to", value: "email" %>
           <%= hidden_field_tag "email_subject", value: "Message from customer" %>
