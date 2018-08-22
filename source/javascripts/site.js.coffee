@@ -3,16 +3,17 @@
 #= require plugins/ajax_form
 
 $ ->
+  navHeight = ->
+    $('ul.nav').height()
 
   $('.nav-link').click  ->
     $('html, body').animate({
-      scrollTop: $("#{$(@).data('target')}").offset().top - $('ul.nav').height()
+      scrollTop: $("#{$(@).data('target')}").offset().top - navHeight()
     , 2000})
-
 
   $('.selling-point a').click  ->
     $('html, body').animate({
-      scrollTop: $("#{$(@).data('target')}").offset().top - $('ul.nav').height()
+      scrollTop: $("#{$(@).data('target')}").offset().top - navHeight()
     , 2000})
 
   calculateOmiseAmount = (price) ->
