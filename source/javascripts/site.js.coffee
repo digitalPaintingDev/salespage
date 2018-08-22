@@ -31,8 +31,7 @@ $ ->
     image: 'https://cdn.omise.co/assets/dashboard/images/omise-logo.png',
     frameLabel: 'Digital Painting',
     currency: 'thb',
-    submitLabel: 'Pay',
-    otherPaymentMethods: ['internet_banking']
+    submitLabel: 'Pay'
 
   OmiseCard.configureButton '#checkout-course-3', {
     amount: calculateOmiseAmount(2500),
