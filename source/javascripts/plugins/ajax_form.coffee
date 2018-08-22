@@ -26,7 +26,6 @@ $ ->
       $modal = $("#modalResult")
       $modal.find('.loading').show()
       $modal.modal('show')
-      clearForm($form)
 
       $.ajax
         type: 'POST'
@@ -39,6 +38,9 @@ $ ->
         complete: (data) ->
           $submit.removeClass('disabled').prop('disabled', null)
           $submit.find('i').remove()
+          $modal.find('.submit-result span').hide()
+          $modal.find('.submit-result span.submit-success').show()
+          clearForm($form)
 
         success : (data) ->
           $modal.find('.submit-result span').hide()
@@ -48,7 +50,7 @@ $ ->
             when 'success'
               $modal.find('.loading').hide()
               $modal.find('.submit-result span.submit-success').show()
-              @clearForm($form)
+              clearForm($form)
             when 'validationFailed'
               $modal.find('.loading').hide()
               $modal.find('.submit-result span.validation-failed').show()
@@ -68,5 +70,5 @@ $ ->
       return if type == 'hidden'
       if (type == 'checkbox' || type == 'radio')
         $(@).prop('checked', false)
-      else
+      else if (type != 'submit')
         $(@).val('')
