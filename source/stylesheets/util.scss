@@ -1,0 +1,3 @@
+@for $i from 1 to 5 {
+  .indent-#{$i} { text-indent: $i*5vw; }
+}
