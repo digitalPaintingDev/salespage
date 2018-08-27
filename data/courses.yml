@@ -1,19 +1,27 @@
 title: คอร์สเรียน
 course1:
-  title: Portrait เน้นวาดภาพบุคคล
-  subtitle: เราแนะนำ คอร์สเรียน Portrait พื้นฐาน นะคะ สอนตั้งแต่การวาดโครงหน้า จนถึงเก็บรายละเอียด แต่ละจุดให้สมจริงเลยค่ะ
+  title: Digital Painting
+  subtitle: ประกอบด้วย 3 คอร์สเรียน
+    Digital Painting 1 พื้นฐาน /
+    Digital Painting 2 พัฒนาฝีมือ /
+    Digital Painting 3 มืออาชีพ
 course2:
-  title: มังงะ วาดการ์ตูนญี่ปุ่น
-  subtitle: เนื้อหาเป็นคลิปสอนจากกลุ่ม Live Facebook ความยาวเนื้อหาละ 120 นาที มีการบ้านให้ทำท้ายคลิป ผู้เรียนสามารถส่งงานให้ Comment ได้ทางแชทเพจด้วยนะคะ
+  title: iPad Painting
+  subtitle: สอนตั้งแต่แกะกล่อง ลงแอพ และพื้นฐานการใช้ปากกา Apple Pencil
+    ผู้เรียนสามารถวาดรูปได้ด้วยแอพ ทำตามได้ทุกขั้นตอน จากพื้นฐาน
+    และต่อยอดนำทักษะใช้ในด้านอื่นๆได้
 course3:
-  title: Painting 1
-  subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  title: Wacom Painting
+  subtitle: เนื้อหาเป็นการใช้เมาส์ปากกาตั้งแต่เริ่มต้นลากเส้น และการคุมน้ำหนักมือ
+    เนื้อหาเข้าใจง่ายทำตามได้แม้ไม่เคยจับเมาส์ปากกามาก่อน
 course4:
-  title: Painting 2
-  subtitle:  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  title: MANGA
+  subtitle: MANGA วาดการ์ตูนญี่ปุ่น
+    เนื้อหาเป็นคลิปสอนจากกลุ่ม Live Facebook ความยาวเนื้อหาละ 120 นาที
 course5:
-  title: Painting 3
-  subtitle:  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  title: PORTRAIT
+  subtitle: วาดภาพ PORTRAIT วาดภาพเน้นบุคคล
+    สอนตั้งแต่การวาดโครงหน้า จนถึงเก็บรายละเอียด แต่ละจุดให้สมจริง
 course6:
-  title: Painting 4
-  subtitle:  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  title: Character Design
+  subtitle: คอร์สเรียนออกแบบตัวละคร สอนตั้งแต่พื้นฐานการออกแบบตัวละคร ท่าทาง เสือ้ผ้า ชุด ส่วนประกอบต่างๆ

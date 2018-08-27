@@ -49,7 +49,9 @@ body {
   position: fixed;
   z-index: 1000;
   top: 0;
-  width: 100%
+  width: 100%;
+
+  .nav { width: calc(100% - 40px); }
 }
 
 .container {
@@ -59,7 +61,8 @@ body {
 }
 
 #hero-image {
-  background-image: asset-url("images/hero.jpg");
+  background-image: asset-url("images/banner.jpg");
+  background-size: cover;
   height: 450px;
   margin-top: 38px;
   position: relative;
@@ -98,10 +101,10 @@ body {
     }
   }
   .course-1 .image {
-    background-image: asset-url("images/portrait.jpg");
+    background-image: asset-url("images/courses/digital_painting.jpg");
   }
   .course-2 .image {
-    background-image: asset-url("images/manga.jpg");
+    background-image: asset-url("images/courses/ipad_painting.jpg");
   }
 }
 
@@ -114,16 +117,16 @@ body {
     }
   }
   .course-3 .image {
-    background-image: asset-url("images/portrait.jpg");
+    background-image: asset-url("images/courses/wacom_painting.jpg");
   }
   .course-4 .image {
-    background-image: asset-url("images/manga.jpg");
+    background-image: asset-url("images/courses/manga.jpg");
   }
   .course-5 .image {
-    background-image: asset-url("images/portrait.jpg");
+    background-image: asset-url("images/courses/portrait.jpg");
   }
   .course-6 .image {
-    background-image: asset-url("images/manga.jpg");
+    background-image: asset-url("images/courses/character_design.jpg");
   }
 }
 
@@ -256,4 +259,19 @@ footer {
   padding: 30px;
   background-color: white;
   // box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+#courses-table {
+  td.courses-name {
+    padding: 15px 0 20px;
+  }
+
+  td {
+    vertical-align: top;
+  }
+
+  tr td:first-child {
+    min-width: 90px;
+    padding-bottom: 8px;
+  }
 }

@@ -1,17 +1,20 @@
-<ul class="nav justify-content-end" id="landing-nav">
-  <li class="nav-item">
-    <a class="nav-link" href="<%= current_page.url != '/' ? '/#courses' : '#courses' %>" data-target="#courses">
-      <%= data.courses.title %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= current_page.url != '/' ? '/#step-to-apply' : '#step-to-apply' %>" data-target="#step-to-apply">
-      <%= data.apply.title %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="<%= current_page.url != '/' ? '/#question-answer' : '#question-answer' %>" data-target="#question-answer">
-      <%= data.faq.title %></a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="http://line.me/ti/p/~digitalpainting">Chat เลย</a>
-  </li>
+<ul class="nav" id="landing-nav">
+  <%= link_to image_tag("logo.jpg", width: 40), '/' %>
+  <div class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" href="<%= current_page.url != '/' ? '/#courses' : '#courses' %>" data-target="#courses">
+        <%= data.courses.title %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<%= current_page.url != '/' ? '/#step-to-apply' : '#step-to-apply' %>" data-target="#step-to-apply">
+        <%= data.apply.title %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<%= current_page.url != '/' ? '/#question-answer' : '#question-answer' %>" data-target="#question-answer">
+        <%= data.faq.title %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://line.me/ti/p/~digitalpainting">Chat เลย</a>
+    </li>
+  </div> <!-- .justify-content-end -->
 </ul>
