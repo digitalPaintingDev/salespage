@@ -96,8 +96,10 @@ body {
     .image {
       background-size: cover;
       box-shadow: 10px 10px #bbb;
-      height: 270px;
+      height: 320px;
       margin-bottom: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
   .course-1 .image {
@@ -113,7 +115,15 @@ body {
 
     .image {
       background-size: cover; // box-shadow: 10px 10px #bbb;
+      background-repeat: no-repeat;
+      background-position: center;
       height: 160px;
+    }
+
+    @media(max-width: 768px) {
+      .image {
+        height: 220px;
+      }
     }
   }
   .course-3 .image {
