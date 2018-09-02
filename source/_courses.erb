@@ -28,10 +28,8 @@
         <div class="course-3">
           <div class="box mb-4">
             <div class="image"></div> <!-- .image -->
-            <%= hidden_field_tag "course", value: "1" %>
-            <%= hidden_field_tag "course_name", value: "Painting 1" %>
             <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-3">
+              id="checkout-course-3" data-course="Wacom Painting">
               2,500</button>
           </div>
           <h4 class="title"><%= data.courses.course3.title %></h4>
@@ -43,7 +41,7 @@
           <div class="box mb-4">
             <div class="image"></div> <!-- .image -->
             <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-4">
+              id="checkout-course-4" data-course="MANGA">
               2,500</button>
           </div>
           <h4 class="title"><%= data.courses.course4.title %></h4>
@@ -55,7 +53,7 @@
           <div class="box mb-4">
             <div class="image"></div> <!-- .image -->
             <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-5">
+              id="checkout-course-5" data-course="PORTRAIT">
               2,500</a>
           </div>
           <h4 class="title"><%= data.courses.course5.title %></h4>
@@ -67,7 +65,7 @@
           <div class="box mb-4">
             <div class="image"></div> <!-- .image -->
             <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-6">
+              id="checkout-course-6" data-course="Character Design">
               2,500</a>
           </div>
           <h4 class="title"><%= data.courses.course6.title %></h4>
@@ -76,4 +74,5 @@
       </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
     </div> <!-- .row course-4-ele -->
   </div> <!-- .container -->
+  <%= hidden_field_tag "course_name", value: "Digital Painting" %>
 </form>

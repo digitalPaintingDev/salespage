@@ -58,3 +58,7 @@ $ ->
   }
 
   OmiseCard.attach()
+
+  $("#courses button[type='submit']").on 'click',  ->
+    if $(@).data('course') && $(@).data('course').length
+      $("input[type='hidden'][name='course_name']").val($(@).data('course'))
