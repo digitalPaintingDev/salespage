@@ -24,6 +24,7 @@ $ ->
       formData = new FormData($form[0])
       url = $form.attr('action')
       $modal = $("#modalResult")
+      $modal.find('.submit-result span').hide()
       $modal.find('.loading').show()
       $modal.modal('show')
 
