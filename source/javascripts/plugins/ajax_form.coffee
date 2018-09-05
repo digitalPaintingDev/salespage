@@ -36,16 +36,18 @@ $ ->
         contentType: false
         processData: false
 
-        complete: (data) ->
-          $submit.removeClass('disabled').prop('disabled', null)
-          $submit.find('i').remove()
-          $modal.find('.submit-result span').hide()
-          $modal.find('.submit-result span.submit-success').show()
-          clearForm($form)
+        # complete: (data) ->
+        #   console.log 'complete'
+        #   console.log data
+        #   $submit.removeClass('disabled').prop('disabled', null)
+        #   $submit.find('i').remove()
+        #   $modal.find('.submit-result span').hide()
+        #   $modal.find('.submit-result span.submit-success').show()
+        #   clearForm($form)
 
         success : (data) ->
+          console.log 'success'
           $modal.find('.submit-result span').hide()
-          $modal.modal('hide')
           response = JSON.parse(data)
           switch response.result
             when 'success'
@@ -55,11 +57,15 @@ $ ->
             when 'validationFailed'
               $modal.find('.loading').hide()
               $modal.find('.submit-result span.validation-failed').show()
+              for error in response.errors[0][1]
+                $modal.find(".submit-result span[data-error='#{error}']").show()
             when 'error'
               $modal.find('.loading').hide()
               $modal.find('.submit-result span.submit-error').show()
 
         error: (data) ->
+          console.log 'error'
+          console.log data
           $modal.find('.loading').hide()
           $modal.find('.submit-result span.submit-error').show()
 
