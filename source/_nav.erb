@@ -1,20 +1,27 @@
-<ul class="nav" id="landing-nav">
-  <%= link_to image_tag("logo.jpg", width: 40), '/' %>
-  <div class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link" href="<%= current_page.url != '/' ? '/#courses' : '#courses' %>" data-target="#courses">
-        <%= data.courses.title %></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="<%= current_page.url != '/' ? '/#step-to-apply' : '#step-to-apply' %>" data-target="#step-to-apply">
-        <%= data.apply.title %></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="<%= current_page.url != '/' ? '/#question-answer' : '#question-answer' %>" data-target="#question-answer">
-        <%= data.faq.title %></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="http://line.me/ti/p/~digitalpainting">Chat เลย</a>
-    </li>
-  </div> <!-- .justify-content-end -->
+<ul class="p-0 nav navbar navbar-expand-sm" id="landing-nav">
+  <%= link_to image_tag("logo.jpg", width: 40), '/', class: 'navbar-brand p-0' %>
+  <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="navbar-collapse collapse" style="flex-grow: 40"></div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto justify-content-end p-3 p-sm-0">
+      <li class="nav-item">
+        <a class="nav-link" href="<%= current_page.url != '/' ? '/#courses' : '#courses' %>" data-target="#courses">
+          <%= data.courses.title %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= current_page.url != '/' ? '/#step-to-apply' : '#step-to-apply' %>" data-target="#step-to-apply">
+          <%= data.apply.title %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= current_page.url != '/' ? '/#question-answer' : '#question-answer' %>" data-target="#question-answer">
+          <%= data.faq.title %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://line.me/ti/p/~digitalpainting">Chat เลย</a>
+      </li>
+    </ul>
+  </div>
 </ul>

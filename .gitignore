@@ -21,6 +21,8 @@
 
 /public/assets
 .byebug_history
+build/*
+.sass-cache/*
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
