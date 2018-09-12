@@ -103,3 +103,19 @@ title: Pandet Online
 
 <%= partial "modal_result" %>
 <%= partial "courses_modal" %>
+
+<div id="choosed-course">
+  <form class="checkout-form" name="checkoutForm" method="POST" action="/checkout.php">
+    <%= hidden_field_tag "course_name", value: "Digital Painting" %>
+    <% (1..6).to_a.each do |id| %>
+      <button style="display:none" data-course="<%= data.courses["course#{id}"].title %>" class="choosed-course-purchase-button" id="checkout-course-<%= id %>">
+        <div class="d-flex">
+          <div class="flex-grow-1">
+            <small>กดเพื่อชำระค่าสมัครคอร์ส</small><br/>
+            <strong><%= data.courses["course#{id}"].title %></strong>
+          </div>
+        </div>
+      </button>
+    <% end %>
+  </form>
+</div>

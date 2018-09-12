@@ -1,78 +1,101 @@
-<form class="checkout-form" name="checkoutForm" method="POST" action="/checkout.php">
+<div class="container" id="courses">
+  <h2><%= data.courses.title %></h2>
+  <div class="row course-2-ele pb-3">
+    <div class="col-md-6 col-sm-12 course">
+      <div class="course-1">
+        <div class="image"></div> <!-- .image -->
+        <h3 class="title"><%= data.courses.course1.title %></h3>
+        <p class="subtitle"><%= data.courses.course1.subtitle %></p>
+        <small>
+          <%= link_to "รายละเอียดเพิ่มเติม", '', 'data-toggle':"modal",
+                'data-target':"#digitalPaintingModal" %>
+        </small>
+        <a href="#" class="btn-abs mt-2 choose-course btn btn-primary"
+          data-id="checkout-course-1">
+          เลือกคอร์สนี้</a>
+      </div> <!-- .course-1 -->
+    </div> <!-- .col-md-6 -->
+    <div class="col-md-6 col-sm-12 course">
+      <div class="course-2">
+        <div class="image"></div> <!-- .image -->
+        <h3 class="title"><%= data.courses.course2.title %></h3>
+        <p class="subtitle">
+          <%= data.courses.course2.subtitle %>
+          <a href="#" class="btn-abs mt-2 choose-course btn btn-primary"
+              data-id="checkout-course-2">
+              เลือกคอร์สนี้</a>
+        </p>
+      </div>
+    </div> <!-- .col-md-6 -->
+  </div> <!-- .row -->
 
-  <div class="container" id="courses">
-    <h2><%= data.courses.title %></h2>
-    <div class="row course-2-ele pb-3">
-      <div class="col-md-6 col-sm-12">
-        <div class="course-1">
+  <div class="row course-4-ele">
+    <div class="col-lg-3 col-md-6 col-xs-12 course">
+      <div class="course-3">
+        <div class="box mb-4">
           <div class="image"></div> <!-- .image -->
-          <h3 class="title"><%= data.courses.course1.title %></h3>
-          <p class="subtitle"><%= data.courses.course1.subtitle %></p>
-          <small>
-            <%= link_to "รายละเอียดเพิ่มเติม", '', 'data-toggle':"modal",
-                  'data-target':"#digitalPaintingModal" %>
-          </small>
-        </div> <!-- .course-1 -->
-      </div> <!-- .col-md-6 -->
-      <div class="col-md-6 col-sm-12">
-        <div class="course-2">
-          <div class="image"></div> <!-- .image -->
-          <h3 class="title"><%= data.courses.course2.title %></h3>
-          <p class="subtitle"><%= data.courses.course2.subtitle %></p>
+          <a href="#" class="btn btn-rect choose-course btn-primary btn-block"
+            data-id="checkout-course-3">
+            <%= data.courses.course3.price %></a>
         </div>
-      </div> <!-- .col-md-6 -->
-    </div> <!-- .row -->
-
-    <div class="row course-4-ele">
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="course-3">
-          <div class="box mb-4">
-            <div class="image"></div> <!-- .image -->
-            <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-3" data-course="Wacom Painting">
-              2,500 บาท</button>
-          </div>
-          <h4 class="title"><%= data.courses.course3.title %></h4>
-          <p class="subtitle"><%= data.courses.course3.subtitle %></p>
-        </div> <!-- .course-3 -->
-      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="course-4">
-          <div class="box mb-4">
-            <div class="image"></div> <!-- .image -->
-            <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-4" data-course="MANGA">
-              2,500 บาท</button>
-          </div>
-          <h4 class="title"><%= data.courses.course4.title %></h4>
-          <p class="subtitle"><%= data.courses.course4.subtitle %></p>
-        </div> <!-- .course-4 -->
-      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="course-5">
-          <div class="box mb-4">
-            <div class="image"></div> <!-- .image -->
-            <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-5" data-course="PORTRAIT">
-              2,500 บาท</a>
-          </div>
-          <h4 class="title"><%= data.courses.course5.title %></h4>
-          <p class="subtitle"><%= data.courses.course5.subtitle %></p>
-        </div> <!-- .course-5 -->
-      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
-      <div class="col-lg-3 col-md-6 col-xs-12">
-        <div class="course-6">
-          <div class="box mb-4">
-            <div class="image"></div> <!-- .image -->
-            <button type="submit" class="btn btn-rect btn-primary btn-block"
-              id="checkout-course-6" data-course="Character Design">
-              2,500 บาท</a>
-          </div>
-          <h4 class="title"><%= data.courses.course6.title %></h4>
-          <p class="subtitle"><%= data.courses.course6.subtitle %></p>
-        </div> <!-- .course-6 -->
-      </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
-    </div> <!-- .row course-4-ele -->
-  </div> <!-- .container -->
-  <%= hidden_field_tag "course_name", value: "Digital Painting" %>
-</form>
+        <h4 class="title"><%= data.courses.course3.title %></h4>
+        <p class="subtitle">
+          <%= data.courses.course3.subtitle %>
+          <a href="#" class="btn-abs mt-2 choose-course btn btn-primary"
+              data-id="checkout-course-3">
+              เลือกคอร์สนี้</a>
+        </p>
+      </div> <!-- .course-3 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+    <div class="col-lg-3 col-md-6 col-xs-12 course">
+      <div class="course-4">
+        <div class="box mb-4">
+          <div class="image"></div> <!-- .image -->
+          <a href="#" class="btn btn-rect choose-course btn-primary btn-block"
+            data-id="checkout-course-4">
+            <%= data.courses.course4.price %></a>
+        </div>
+        <h4 class="title"><%= data.courses.course4.title %></h4>
+        <p class="subtitle">
+          <%= data.courses.course4.subtitle %>
+          <a href="#" class="btn-abs mt-2 choose-course btn btn-primary"
+              data-id="checkout-course-4">
+              เลือกคอร์สนี้</a>
+        </p>
+      </div> <!-- .course-4 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+    <div class="col-lg-3 col-md-6 col-xs-12 course">
+      <div class="course-5">
+        <div class="box mb-4">
+          <div class="image"></div> <!-- .image -->
+          <a href="#" class="btn btn-rect choose-course btn-primary btn-block"
+            data-id="checkout-course-5">
+            <%= data.courses.course5.price %></a>
+        </div>
+        <h4 class="title"><%= data.courses.course5.title %></h4>
+        <p class="subtitle">
+          <%= data.courses.course5.subtitle %>
+          <a href="#" class="btn-abs mt-2 choose-course btn btn-primary"
+            data-id="checkout-course-5">
+              เลือกคอร์สนี้</a>
+        </p>
+      </div> <!-- .course-5 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+    <div class="col-lg-3 col-md-6 col-xs-12 course">
+      <div class="course-6">
+        <div class="box mb-4">
+          <div class="image"></div> <!-- .image -->
+          <a href="#" class="choose-course btn btn-rect choose-course btn-primary btn-block"
+            data-id="checkout-course-6">
+            <%= data.courses.course6.price %></a>
+        </div>
+        <h4 class="title"><%= data.courses.course6.title %></h4>
+        <p class="subtitle">
+          <%= data.courses.course6.subtitle %>
+            <a href="#" class="btn-abs mt-2 choose-course btn btn-primary" data-id="checkout-course-6">
+              เลือกคอร์สนี้</a>
+        </p>
+      </div> <!-- .course-6 -->
+    </div> <!-- .col-lg-3 col-md-6 col-xs-12 -->
+  </div> <!-- .row course-4-ele -->
+</div> <!-- .container -->

@@ -29,7 +29,7 @@ $ ->
   OmiseCard.configure
     publicKey: 'pkey_test_5cfmob869aw9gujujmx',
     image: 'https://cdn.omise.co/assets/dashboard/images/omise-logo.png',
-    frameLabel: 'Digital Painting',
+    frameLabel: 'Pandet Online Thailand',
     currency: 'thb',
     submitLabel: 'Pay'
 
@@ -59,6 +59,12 @@ $ ->
 
   OmiseCard.attach()
 
-  $("#courses button[type='submit']").on 'click',  ->
+  $("#courses .choose-course").on 'click', (e) ->
+    e.preventDefault()
+    id = $(@).attr('data-id')
+    $(".choosed-course-purchase-button").hide()
+    $("##{id}").show()
+
+  $(".choosed-course-purchase-button").on 'click',  ->
     if $(@).data('course') && $(@).data('course').length
       $("input[type='hidden'][name='course_name']").val($(@).data('course'))

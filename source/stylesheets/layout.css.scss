@@ -284,3 +284,40 @@ footer {
     padding-bottom: 8px;
   }
 }
+
+#choosed-course {
+  position: fixed;
+  transition: box-shadow 500ms;
+  bottom: 25px;
+  right: 90px;
+
+  .choosed-course-purchase-button {
+    background-color: #da0021;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 35px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 32px;
+
+    strong {
+      font-size: 20px;
+    }
+
+    &:hover {
+      box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.course {
+  padding-bottom: 40px;
+  position: relative;
+
+  .btn-abs {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+  }
+}
