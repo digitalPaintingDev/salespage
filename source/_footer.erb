@@ -20,7 +20,7 @@
       </div> <!-- .col-md-4 col-sm-6 col-xs-12 -->
       <div class="col-md-4 col-sm-6 col-xs-12">
         <h6>ฝากข้อความ</h6>
-        <% form_tag 'http://localhost:8888/email_form_with_php.php',
+        <% form_tag '/email_form_with_php.php',
           :class => 'mail-form ajax-form', :method => 'post' do %>
           <div class="form-group">
             <%= label_tag "ชื่อ*", :class => 'name' %><br>
