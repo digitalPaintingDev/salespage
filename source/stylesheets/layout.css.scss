@@ -321,3 +321,13 @@ footer {
     right: 15px;
   }
 }
+
+.course-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
