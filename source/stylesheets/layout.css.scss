@@ -60,11 +60,32 @@ body {
 }
 
 #hero-image {
-  background-image: asset-url("images/banner.jpg");
-  background-size: cover;
-  height: 450px;
+  height: 500px;
   margin-top: 38px;
   position: relative;
+
+  .carousel-inner, .carousel-item {
+    height: 500px;
+  }
+
+  .banner {
+    background-size: cover;
+    background-position: center top;
+    height: 100%;
+    width: 100%;
+  }
+
+  .banner-1 {
+    background-image: asset-url("images/banner-1.jpg");
+  }
+
+  .banner-2 {
+    background-image: asset-url("images/banner-2.jpg");
+  }
+
+  .banner-3 {
+    background-image: asset-url("images/banner-3.jpg");
+  }
 
   .image {
     background: -webkit-linear-gradient(bottom, from(rgba(0, 0, 0, 0.3)), rgba(0, 0, 0, 0.9));
